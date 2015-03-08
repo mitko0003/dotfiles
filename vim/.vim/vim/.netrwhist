@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/wetslap7'
+let g:netrw_dirhist_2='/home/wetslap7/Documents'
+let g:netrw_dirhist_3='/home/wetslap7/Documents/PythonSource'
+let g:netrw_dirhist_4='/home/wetslap7/Documents'
+let g:netrw_dirhist_5='/home/wetslap7'

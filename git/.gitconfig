@@ -1,0 +1,10 @@
+[user]
+	name = Dimitar Trendafilov
+	email = dimitar.trendafilov94@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+	pager = less
+	excludesfile = ~/.gitignore
+[github]
+	user = mitko0003
