@@ -1,0 +1,32 @@
+[$Version]
+update_info=konsole.upd:2.9.0-global-options
+
+[Colors]
+CurrentPalette=Forty Colors
+
+[Desktop Entry]
+DefaultProfile=Shell.profile
+
+[Favorite Profiles]
+Favorites=Shell.profile
+
+[KFileDialog Settings]
+Height 768=420
+Recent Files[$e]=terminal_background.png,$HOME/Images/Backgrounds/terminal_background.png
+Recent URLs[$e]=$HOME/Images/Backgrounds/
+Width 1366=683
+
+[KonsoleWindow]
+AllowMenuAccelerators=true
+ShowMenuBarByDefault=false
+ShowWindowTitleOnTitleBar=true
+
+[MainWindow]
+Height 768=769
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAABVYAAALRAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1366=1367
+
+[TabBar]
+NewTabBehavior=PutNewTabAfterCurrentTab
