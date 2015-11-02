@@ -12,3 +12,5 @@ ln -sf /home/$1/dotfiles/git/.gitconfig /home/$1/.gitconfig
 ln -sf /home/$1/dotfiles/etc/sddm.conf /etc/sddm.conf
 ln -sf /home/$1/dotfiles/etc/hostname /etc/hostname
 ln -sf /home/$1/dotfiles/etc/locale.conf /etc/locale.conf
+ln -sf /home/$1/dotfiles/daily.service /usr/lib/systemd/system/daily.service
+ln -sf /home/$1/dotfiles/daily.timer /usr/lib/systemd/system/daily.timer

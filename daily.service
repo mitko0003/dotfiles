@@ -1,0 +1,6 @@
+[Unit]
+Description=Daily commit/push on dotfiles
+
+[Service]
+Type=simple
+ExecStart=/home/wetslap7/dotfiles/daily.sh
