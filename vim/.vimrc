@@ -11,6 +11,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'msanders/snipmate.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'beyondmarc/opengl.vim'
+Plugin 'tikhomirov/vim-glsl'
+Plugin 'tell-k/vim-autopep8'
 
 " All of vim Plugins must be added before the following line
 call vundle#end()            " required
@@ -23,6 +28,7 @@ let g:molokai_original = 0
 " airline settings
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
 set t_Co=256
 set laststatus=2
 
@@ -38,6 +44,26 @@ let g:NERDTreeIgnore = [
       \ '\.swp'
       \ ] " dont show listed files
 
+" syntastic options for more info:
+" https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0 " prevent location list from opening all the time
+let g:syntastic_enable_signs = 1 " marks lines with errors
+let g:syntastic_style_warning_symbol = "⚠" " cool signs for errors (+ next 4)
+let g:syntastic_style_error_symbol = "✗"  
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler_options = '-std=c++14' " stops errors and warnings when using c++11 stuff
+
+" autopep8 options
+let g:autopep8_disable_show_diff=1
+
 " disable backups
 set nobackup
 set noswapfile
@@ -48,6 +74,7 @@ command W w !sudo tee > /dev/null %
 
 " key combination maps
 map <C-o> :NERDTreeToggle<CR>
+autocmd FileType python map <buffer> <C-k><C-d> :call Autopep8()<CR>
 
 " search options
 set hlsearch " highlight search hits
@@ -64,8 +91,9 @@ set scrolloff=5 " starts scrolling 5 lines before top and bottom
 set showcmd " Show (partial) command in status line.
 syntax on " color syntax
 
-"
-"
+" spell checking
+setlocal spell spelllang=en_gb " buildin feature
+
 " add bracket handling
 "
 "

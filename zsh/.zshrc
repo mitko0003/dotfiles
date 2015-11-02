@@ -1,3 +1,28 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/home/wetslap7/.oh-my-zsh
+
+# self made theme with working tab-completion
+ZSH_THEME="wetslap7"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+# User configuration
+
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# Uncomment the following line to use case-sensitive completion.
+CASE_SENSITIVE="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
 # Keep 5000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=5000
 SAVEHIST=5000
@@ -17,6 +42,8 @@ setopt HIST_SAVE_NO_DUPS
 # remove history command
 setopt HIST_NO_STORE
 
+# setting the default editor to vim
+export EDITOR="vim"
 
 # for vi mode not emacs mode
 bindkey -v
@@ -64,4 +91,4 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 # for sweet start logo
-screenfetch
+screenfetch -E # -E to suspend error output because of some QT session error
